@@ -7,6 +7,14 @@ module.exports = function(app) {
         res.sendfile('./public/index.html');
     });
 
+    app.get('/ang', function(req, res) {
+        res.sendfile('./public/indexang.html');
+    });
+
+    app.get('/index2', function(req, res) {
+        res.sendfile('./public/index2.html');
+    });
+
     //TODO Get data from mongoDb
     var questionData = {
         id0: {question: "What kind of work environment do you prefer?",
