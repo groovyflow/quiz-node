@@ -1,0 +1,29 @@
+<!-- form styling based on http://getbootstrap.com/css/ -->
+<form id="questionsForm" class="form-horizontal" role="form">
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <h3>{{data.question}}</h3>
+        </div>
+    </div>
+
+
+    <div class="form-group" ng-repeat="option in data.options">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="radio">
+                <label>
+                    <input type="radio"   ng-model="data.answer" value="{{$index }}">{{$index + 1}} {{option.text}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" ng-click="nextQuestion(data.answer)">Next</button>
+        </div>
+    </div>
+    <div class="col-sm-offset-2 col-sm-10">
+        <span class="error"></span>
+    </div>
+
+</form>
