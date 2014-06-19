@@ -7,11 +7,7 @@ module.exports = function(app) {
         res.sendfile('./public/index.html');
     });
 
-    app.get('/ang', function(req, res) {
-        res.sendfile('./public/indexang.html');
-    });
-
-    app.get('/index2', function(req, res) {
+    app.get('/quizang', function(req, res) {
         res.sendfile('./public/index2.html');
     });
 
